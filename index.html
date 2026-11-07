@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Invitation | Chi. Sai Deepak Reddy &amp; Chi.La.Sow. Roshini Reddy</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: Great Vibes, Cinzel Decorative, Cormorant Garamond, Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&family=Noto+Sans+Telugu:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            maroon: {
+              DEFAULT: '#6B1124',
+              dark: '#4A0B18',
+              light: '#881B32',
+              soft: '#FBF5F5'
+            },
+            ivory: {
+              DEFAULT: '#FDFBF7',
+              dark: '#F4ECE1',
+              light: '#FFFFFF'
+            },
+            gold: {
+              DEFAULT: '#C99E52',
+              dark: '#9A7532',
+              light: '#E8CA88',
+              pale: '#F9F4EB'
+            }
+          },
+          fontFamily: {
+            script: ['"Great Vibes"', 'cursive'],
+            cinzel: ['"Cinzel"', 'serif'],
+            cinzelDeco: ['"Cinzel Decorative"', 'serif'],
+            serif: ['"Cormorant Garamond"', 'serif'],
+            sans: ['"Montserrat"', 'sans-serif'],
+            telugu: ['"Noto Sans Telugu"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom luxury gold gradients & micro-animations */
+    .gold-foil-text {
+      background: linear-gradient(135deg, #ECC880 0%, #D4AF37 35%, #FBF0D2 50%, #B8860B 75%, #F4D06F 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .gold-foil-border {
+      border-image: linear-gradient(135deg, #ECC880, #D4AF37, #9A7532, #F4D06F) 1;
+    }
+
+    .gold-gradient-bg {
+      background: linear-gradient(135deg, #D4AF37 0%, #C39938 50%, #9D7422 100%);
+    }
+
+    .shimmer-badge {
+      background: linear-gradient(90deg, rgba(212,175,55,0.1) 0%, rgba(212,175,55,0.3) 50%, rgba(212,175,55,0.1) 100%);
+      background-size: 200% 100%;
+      animation: shimmer 4s infinite linear;
+    }
+
+    @keyframes shimmer {
+      0% { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
+    }
+
+    /* Traditional Indian Arch cutout top shape */
+    .mandap-arch {
+      clip-path: ellipse(90% 100% at 50% 0%);
+    }
+
+    /* Subtle paper texture overlay */
+    .bg-pattern {
+      background-color: #FDFBF7;
+      background-image: radial-gradient(#d4af37 0.65px, transparent 0.65px), radial-gradient(#6b1124 0.65px, #fdfbf7 0.65px);
+      background-size: 26px 26px;
+      background-position: 0 0, 13px 13px;
+      background-opacity: 0.05;
+    }
+
+    /* Editable focus outline indicators */
+    [contenteditable="true"] {
+      transition: all 0.2s ease;
+      border-radius: 4px;
+      outline: 1px dashed rgba(201, 158, 82, 0.4);
+      padding: 1px 4px;
+    }
+    [contenteditable="true"]:hover {
+      outline: 1.5px dashed #C99E52;
+      background: rgba(201, 158, 82, 0.08);
+    }
+    [contenteditable="true"]:focus {
+      outline: 2px solid #881B32;
+      background: rgba(255, 255, 255, 0.9);
+    }
+  </style>
+</head>
+<body class="bg-stone-900 text-stone-800 antialiased min-h-screen py-0 sm:py-8 flex flex-col items-center justify-start selection:bg-maroon selection:text-gold-light">
+
+  <!-- TOP FLOATING UTILITIES (Edit Mode Toggle & Music) -->
+  <div class="fixed top-3 z-50 flex items-center gap-2 px-3 py-1.5 bg-stone-950/85 backdrop-blur-md border border-gold/40 rounded-full shadow-2xl text-xs text-gold-light">
+    <!-- Edit Toggle -->
+    <button id="toggleEditBtn" class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-gold/20 hover:bg-gold/30 text-white font-sans transition-all">
+      <svg id="editIcon" class="w-3.5 h-3.5 text-gold-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/>
+      </svg>
+      <span id="editLabel">Edit Details</span>
+    </button>
+
+    <div class="h-3 w-px bg-gold/30"></div>
+
+    <!-- Music / Nadaswaram Chime Toggle -->
+    <button id="audioToggleBtn" class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-stone-800 hover:bg-stone-700 text-stone-200 font-sans transition-all">
+      <svg id="audioIcon" class="w-3.5 h-3.5 text-gold-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/>
+      </svg>
+      <span id="audioLabel">Sacred Chimes</span>
+    </button>
+  </div>
+
+  <!-- EDIT DRAWER (Visible when editing is toggled ON) -->
+  <aside id="editDrawer" class="hidden w-full max-w-md bg-stone-900 border-b border-gold/40 p-4 text-xs text-stone-200 z-40 mb-3 rounded-b-xl shadow-2xl transition-all">
+    <div class="flex items-center justify-between pb-2 mb-3 border-b border-stone-700">
+      <span class="font-semibold uppercase tracking-wider text-gold-light flex items-center gap-1.5">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span> Live Editor Active
+      </span>
+      <span class="text-stone-400">Click any text directly on the card to edit!</span>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+      <div>
+        <label class="block text-stone-300 font-medium mb-1">WithJoy RSVP Link:</label>
+        <input type="text" id="inputRsvpUrl" value="https://withjoy.com/saideepak-and-roshini" class="w-full bg-stone-800 border border-gold/40 rounded px-2.5 py-1.5 text-white focus:outline-none focus:border-gold">
+      </div>
+      <div>
+        <label class="block text-stone-300 font-medium mb-1">Google Maps Link:</label>
+        <input type="text" id="inputMapUrl" value="https://maps.google.com/?q=Vivanta+Grand+Banquets+4440+State+Hwy+121+Ste+25+Lewisville+TX+75056" class="w-full bg-stone-800 border border-gold/40 rounded px-2.5 py-1.5 text-white focus:outline-none focus:border-gold">
+      </div>
+      <div>
+        <label class="block text-stone-300 font-medium mb-1">Calendar Event Date (YYYYMMDD):</label>
+        <input type="text" id="inputCalDate" value="20261120" class="w-full bg-stone-800 border border-gold/40 rounded px-2.5 py-1.5 text-white focus:outline-none focus:border-gold">
+      </div>
+      <div class="flex items-end">
+        <button id="saveDraftBtn" class="w-full py-1.5 px-3 bg-gradient-to-r from-gold-dark via-gold to-gold-dark text-stone-950 font-bold rounded hover:brightness-110 shadow">
+          Apply & Lock View
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN MOBILE-FIRST INVITATION CONTAINER -->
+  <main class="relative w-full max-w-[460px] bg-ivory rounded-none sm:rounded-[36px] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.8)] border-0 sm:border-[5px] sm:border-gold/60 overflow-hidden flex flex-col pb-28">
+
+    <!-- TOP ORNATE MAROON ARCH / TEMPLE BAND -->
+    <header class="relative bg-gradient-to-b from-maroon-dark via-maroon to-maroon-dark text-center pt-10 pb-8 px-6 overflow-hidden">
+      <!-- Traditional Corner SVG Flourishes -->
+      <div class="absolute top-2 left-2 opacity-70 w-12 h-12 text-gold">
+        <svg viewBox="0 0 100 100" fill="currentColor">
+          <path d="M0,0 L100,0 C60,0 20,40 20,80 L0,100 Z"/>
+          <circle cx="25" cy="25" r="8" fill="#F4D06F"/>
+        </svg>
+      </div>
+      <div class="absolute top-2 right-2 opacity-70 w-12 h-12 text-gold transform rotate-90">
+        <svg viewBox="0 0 100 100" fill="currentColor">
+          <path d="M0,0 L100,0 C60,0 20,40 20,80 L0,100 Z"/>
+          <circle cx="25" cy="25" r="8" fill="#F4D06F"/>
+        </svg>
+      </div>
+
+      <!-- Sacred Ganesha Emblem SVG -->
+      <div class="flex justify-center mb-2">
+        <div class="w-16 h-16 rounded-full bg-maroon-dark/80 p-2.5 border border-gold/60 shadow-inner flex items-center justify-center">
+          <svg class="w-11 h-11 text-gold-light" viewBox="0 0 24 24" fill="currentColor">
+            <!-- Simplified auspicious Ganesh icon outline -->
+            <path d="M12 2C9.5 2 7 3.5 7 6c0 2 1.5 3.5 2.5 4.5-.5 1-1.5 2.5-1.5 4.5 0 3 2.5 5 4 5s4-2 4-5c0-2-1-3.5-1.5-4.5 1-1 2.5-2.5 2.5-4.5 0-2.5-2.5-4-5-4zm0 2c1.7 0 3 1.1 3 2.5 0 1.2-.9 2.2-2 2.9V8h-2v1.4C9.9 8.7 9 7.7 9 6.5 9 5.1 10.3 4 12 4zm0 10c-1.3 0-2.5 1-2.5 2.5 0 1.4 1.1 2.5 2.5 2.5s2.5-1.1 2.5-2.5c0-1.5-1.2-2.5-2.5-2.5z"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Auspicious Sloka / Telugu Invocations -->
+      <div class="space-y-1">
+        <p class="font-telugu font-bold text-sm tracking-wider gold-foil-text" data-editable="true">
+          || శ్రీరస్తు - శుభమస్తు - అవిఘ్నమస్తు ||
+        </p>
+        <p class="font-cinzel text-[11px] tracking-[0.2em] text-gold-light/95 uppercase font-medium" data-editable="true">
+          Srirasthu ! &nbsp; Shubhamasthu !! &nbsp; Avighnamasthu !!!
+        </p>
+        <h1 class="font-cinzelDeco text-lg sm:text-xl font-bold tracking-widest text-gold-light uppercase pt-1" data-editable="true">
+          Wedding Invitation
+        </h1>
+      </div>
+    </header>
+
+    <!-- CARD BODY -->
+    <div class="px-6 sm:px-8 pt-6 pb-2 text-center relative z-10">
+
+      <!-- Golden Mandala Motif Divider -->
+      <div class="flex items-center justify-center gap-3 my-2 text-gold">
+        <div class="h-px bg-gradient-to-r from-transparent via-gold to-transparent flex-1"></div>
+        <svg class="w-5 h-5 text-gold-dark" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2L14 9H21L15.5 13.5L17.5 20.5L12 16L6.5 20.5L8.5 13.5L3 9H10L12 2Z"/>
+        </svg>
+        <div class="h-px bg-gradient-to-r from-transparent via-gold to-transparent flex-1"></div>
+      </div>
+
+      <!-- INVITATION WORDING FROM PHYSICAL CARD -->
+      <p class="font-serif italic text-sm sm:text-base text-stone-700 mt-2 leading-relaxed" data-editable="true">
+        We solicit your gracious presence with family and friends on the auspicious occasion of the marriage of our Eldest Son
+      </p>
+
+      <!-- COUPLE NAMES -->
+      <div class="py-3 px-2 rounded-2xl bg-gradient-to-b from-maroon-soft via-transparent to-maroon-soft border border-gold/40 shadow-sm my-3">
+        <!-- Groom (Chi. Sai Deepak Reddy) -->
+        <div class="mb-1">
+          <span class="font-serif text-sm text-stone-500 italic block mb-0.5" data-editable="true">Chi.</span>
+          <h2 class="font-serif font-bold text-2xl sm:text-3xl text-maroon-dark tracking-wide uppercase" data-editable="true">
+            Sai Deepak Reddy
+          </h2>
+        </div>
+
+        <!-- Ornate with Knot -->
+        <div class="flex items-center justify-center my-1.5">
+          <span class="font-serif italic text-sm text-gold-dark px-3 py-0.5 bg-ivory rounded-full border border-gold/40 font-medium">
+            with
+          </span>
+        </div>
+
+        <!-- Bride (Chi.La.Sow. Roshini Reddy) -->
+        <div class="mt-1">
+          <span class="font-serif text-sm text-stone-500 italic block mb-0.5" data-editable="true">Chi.La.Sow.</span>
+          <h2 class="font-serif font-bold text-2xl sm:text-3xl text-maroon-dark tracking-wide uppercase" data-editable="true">
+            Roshini Reddy
+          </h2>
+          <p class="font-serif text-xs sm:text-sm text-stone-600 italic mt-1 leading-snug px-2" data-editable="true">
+            (Youngest D/o. Sri Kunchala Vittal Reddy - Smt. Suvarna,<br>R/o. Hanumakonda)
+          </p>
+        </div>
+      </div>
+
+      <!-- PRIMARY CEREMONY CARD (SUMUHURTHAM) -->
+      <section class="mt-5 mb-5 relative rounded-2xl p-5 border-2 border-gold/70 bg-gradient-to-b from-[#FFFDF9] via-[#FAF5EC] to-[#F7EFE1] shadow-md text-stone-800">
+        <!-- Badge -->
+        <div class="absolute -top-3.5 left-1/2 transform -translate-x-1/2 px-4 py-0.5 rounded-full bg-maroon-dark text-gold-light border border-gold text-[11px] font-cinzel tracking-wider uppercase shadow">
+          Sumuhurtham (సుముహూర్తం)
+        </div>
+
+        <div class="mt-3">
+          <p class="font-serif italic text-base sm:text-lg text-maroon-dark font-semibold leading-relaxed" data-editable="true">
+            On Friday 20th November 2026<br>at 11-23 a.m. &ldquo;Makara Lagnam&rdquo;
+          </p>
+
+          <div class="h-0.5 w-16 bg-gold/50 mx-auto my-2.5"></div>
+
+          <!-- Date & Time Highlights -->
+          <div class="flex items-center justify-center gap-3 font-cinzel text-maroon-dark">
+            <div class="text-right">
+              <span class="block text-[10px] uppercase tracking-wider text-stone-500">Day</span>
+              <span class="block text-xl sm:text-2xl font-bold" data-editable="true">FRIDAY</span>
+            </div>
+            <div class="h-9 w-px bg-gold"></div>
+            <div class="text-center">
+              <span class="block text-[10px] uppercase tracking-wider text-stone-500">Date</span>
+              <span class="block text-xl sm:text-2xl font-bold" data-editable="true">NOV 20</span>
+            </div>
+            <div class="h-9 w-px bg-gold"></div>
+            <div class="text-left">
+              <span class="block text-[10px] uppercase tracking-wider text-stone-500">Sumuhurtham</span>
+              <span class="block text-xl sm:text-2xl font-bold text-maroon" data-editable="true">11:23 AM</span>
+            </div>
+          </div>
+          <p class="text-[10px] font-sans text-stone-500 mt-1 uppercase tracking-widest" data-editable="true">
+            CST (Central Standard Time, USA)
+          </p>
+
+          <!-- Venue Details -->
+          <div class="mt-4 pt-3 border-t border-gold/40 text-stone-700">
+            <span class="font-cinzel text-xs text-gold-dark font-bold tracking-wider uppercase block mb-1">Venue</span>
+            <p class="font-serif font-bold text-lg text-maroon-dark" id="venueNameText" data-editable="true">
+              Vivanta Grand Banquets
+            </p>
+            <p class="font-sans text-xs text-stone-600 mt-0.5 leading-relaxed" id="venueAddressText" data-editable="true">
+              4440 State Hwy 121 Ste 25,<br>Lewisville, TX 75056
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- INVITED BY SECTION FROM PHYSICAL CARD -->
+      <section class="mt-5 p-4 rounded-xl bg-white/80 border border-gold/40 text-stone-800 shadow-sm text-center">
+        <span class="font-serif italic text-xs text-stone-500 block mb-0.5">Invited by</span>
+        <h3 class="font-serif font-bold text-base sm:text-lg text-maroon-dark" data-editable="true">
+          Gutha Chinna Kanna Reddy - Sukanya
+        </h3>
+        <p class="font-sans text-xs text-stone-600 mt-1" data-editable="true">
+          Suryavamshi Colony, Dvk. Road, Nalgonda.
+        </p>
+        <div class="mt-2 pt-2 border-t border-stone-200 flex flex-wrap items-center justify-center gap-2 text-xs font-sans text-maroon-dark font-semibold">
+          <a href="tel:7382832795" class="inline-flex items-center gap-1 hover:text-gold-dark transition-colors">
+            <svg class="w-3.5 h-3.5 text-gold-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            7382832795
+          </a>
+          <span class="text-stone-300">|</span>
+          <a href="tel:9059975890" class="inline-flex items-center gap-1 hover:text-gold-dark transition-colors">
+            <svg class="w-3.5 h-3.5 text-gold-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            9059975890
+          </a>
+        </div>
+      </section>
+
+      <!-- BLESSINGS & COMPLIMENTS NOTE FROM PHYSICAL CARD -->
+      <footer class="mt-5 pt-3 border-t border-gold/40 text-stone-600">
+        <p class="font-serif italic text-sm" data-editable="true">
+          With Best Compliments From : <span class="font-bold text-maroon-dark not-italic">Near &amp; Dear</span>
+        </p>
+      </footer>
+    </div>
+
+    <!-- STICKY BOTTOM ACTION BAR (MOBILE OPTIMIZED CTAS) -->
+    <nav class="fixed sm:absolute bottom-0 left-0 right-0 max-w-[460px] mx-auto bg-stone-950/95 backdrop-blur-md border-t border-gold/40 p-2.5 px-3 z-30 flex items-center justify-between gap-2 shadow-[0_-10px_20px_rgba(0,0,0,0.3)]">
+      <!-- Add to Calendar Button -->
+      <button id="addToCalBtn" class="flex-1 flex flex-col items-center justify-center py-2 px-1 rounded-xl bg-stone-800 hover:bg-stone-700 text-gold-light border border-gold/30 transition-all active:scale-95">
+        <svg class="w-4 h-4 mb-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        <span class="text-[10px] font-sans font-medium tracking-tight">Calendar</span>
+      </button>
+
+      <!-- View Venue Google Maps Button -->
+      <a id="mapsLinkBtn" href="https://maps.google.com/?q=Vivanta+Grand+Banquets+4440+State+Hwy+121+Ste+25+Lewisville+TX+75056" target="_blank" rel="noopener noreferrer" class="flex-1 flex flex-col items-center justify-center py-2 px-1 rounded-xl bg-stone-800 hover:bg-stone-700 text-gold-light border border-gold/30 transition-all active:scale-95 text-center">
+        <svg class="w-4 h-4 mb-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+        </svg>
+        <span class="text-[10px] font-sans font-medium tracking-tight">Directions</span>
+      </a>
+
+      <!-- WithJoy RSVP Primary Button -->
+      <a id="rsvpWithJoyBtn" href="https://withjoy.com/saideepak-and-roshini" target="_blank" rel="noopener noreferrer" class="flex-[1.6] flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-gradient-to-r from-maroon to-maroon-dark hover:from-maroon-light hover:to-maroon text-gold-light border border-gold/50 font-sans text-xs font-semibold shadow-lg shadow-maroon-dark/50 active:scale-95 transition-all text-center">
+        <svg class="w-4 h-4 fill-current text-gold" viewBox="0 0 24 24">
+          <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+        </svg>
+        <span>RSVP on WithJoy</span>
+      </a>
+    </nav>
+  </main>
+
+  <!-- NOTIFICATION TOAST -->
+  <div id="toastMessage" class="fixed bottom-20 z-50 px-4 py-2 bg-stone-900 border border-gold text-gold-light rounded-full text-xs shadow-xl transition-opacity duration-300 opacity-0 pointer-events-none">
+    Copied calendar link to clipboard!
+  </div>
+
+  <!-- EMBEDDED SACRED AUDIO GENERATOR & LOGIC -->
+  <script>
+    // State
+    let isEditMode = false;
+    let audioContext = null;
+    let isAudioPlaying = false;
+    let chimeInterval = null;
+
+    // Elements
+    const toggleEditBtn = document.getElementById('toggleEditBtn');
+    const editDrawer = document.getElementById('editDrawer');
+    const editLabel = document.getElementById('editLabel');
+    const editableElements = document.querySelectorAll('[data-editable="true"]');
+    const saveDraftBtn = document.getElementById('saveDraftBtn');
+    
+    const inputRsvpUrl = document.getElementById('inputRsvpUrl');
+    const inputMapUrl = document.getElementById('inputMapUrl');
+    const inputCalDate = document.getElementById('inputCalDate');
+    
+    const mapsLinkBtn = document.getElementById('mapsLinkBtn');
+    const rsvpWithJoyBtn = document.getElementById('rsvpWithJoyBtn');
+    const addToCalBtn = document.getElementById('addToCalBtn');
+    const audioToggleBtn = document.getElementById('audioToggleBtn');
+    const audioLabel = document.getElementById('audioLabel');
+    const toast = document.getElementById('toastMessage');
+
+    // Show temporary notification
+    function showToast(msg) {
+      toast.textContent = msg;
+      toast.classList.remove('opacity-0');
+      toast.classList.add('opacity-100');
+      setTimeout(() => {
+        toast.classList.remove('opacity-100');
+        toast.classList.add('opacity-0');
+      }, 3000);
+    }
+
+    // Toggle In-line Edit Mode
+    toggleEditBtn.addEventListener('click', () => {
+      isEditMode = !isEditMode;
+      if (isEditMode) {
+        editDrawer.classList.remove('hidden');
+        editLabel.textContent = 'Preview Mode';
+        toggleEditBtn.classList.add('bg-gold', 'text-stone-900');
+        toggleEditBtn.classList.remove('bg-gold/20', 'text-white');
+        editableElements.forEach(el => el.setAttribute('contenteditable', 'true'));
+        showToast('Editable mode on: Click text directly to customize.');
+      } else {
+        closeEditMode();
+      }
+    });
+
+    function closeEditMode() {
+      isEditMode = false;
+      editDrawer.classList.add('hidden');
+      editLabel.textContent = 'Edit Details';
+      toggleEditBtn.classList.remove('bg-gold', 'text-stone-900');
+      toggleEditBtn.classList.add('bg-gold/20', 'text-white');
+      editableElements.forEach(el => el.setAttribute('contenteditable', 'false'));
+      
+      // Update dynamic action targets
+      mapsLinkBtn.href = inputMapUrl.value;
+      rsvpWithJoyBtn.href = inputRsvpUrl.value;
+      showToast('Changes applied successfully!');
+    }
+
+    saveDraftBtn.addEventListener('click', closeEditMode);
+
+    // Sync input changes in real time
+    inputMapUrl.addEventListener('input', (e) => {
+      mapsLinkBtn.href = e.target.value;
+    });
+
+    inputRsvpUrl.addEventListener('input', (e) => {
+      rsvpWithJoyBtn.href = e.target.value;
+    });
+
+    // Generate .ICS Calendar File on the fly
+    addToCalBtn.addEventListener('click', () => {
+      const calDate = inputCalDate.value || '20261120';
+      const venueName = document.getElementById('venueNameText').innerText.trim();
+      const venueAddress = document.getElementById('venueAddressText').innerText.trim();
+
+      // In November, Lewisville TX is in Central Standard Time (CST = UTC-6)
+      // 11:23 AM CST = 17:23 UTC
+      // 03:00 PM CST = 21:00 UTC
+      const icsData = [
+        "BEGIN:VCALENDAR",
+        "VERSION:2.0",
+        "PRODID:-//Sri Wedding Invitation//EN",
+        "CALSCALE:GREGORIAN",
+        "BEGIN:VEVENT",
+        `SUMMARY:Wedding: Chi. Sai Deepak Reddy & Chi.La.Sow. Roshini Reddy (Sumuhurtham)`,
+        `DESCRIPTION:Sacred Wedding Sumuhurtham at 11:23 AM 'Makara Lagnam'. Venue: Vivanta Grand Banquets, Lewisville TX. RSVP: https://withjoy.com/saideepak-and-roshini`,
+        `LOCATION:${venueName}, ${venueAddress}`,
+        `DTSTART:${calDate}T172300Z`,
+        `DTEND:${calDate}T210000Z`,
+        "STATUS:CONFIRMED",
+        "END:VEVENT",
+        "END:VCALENDAR"
+      ].join("\r\n");
+
+      const blob = new Blob([icsData], { type: 'text/calendar;charset=utf-8' });
+      const link = document.createElement('a');
+      link.href = window.URL.createObjectURL(blob);
+      link.setAttribute('download', 'SaiDeepakReddy_RoshiniReddy_Wedding.ics');
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      showToast('Wedding event downloaded to your calendar!');
+    });
+
+    // Synthesized Indian Bell & Sacred Chimes using Web Audio API (No external sound files)
+    function playSacredChime(freq = 528) {
+      if (!audioContext) {
+        audioContext = new (window.AudioContext || window.webkitAudioContext)();
+      }
+      if (audioContext.state === 'suspended') {
+        audioContext.resume();
+      }
+
+      const osc = audioContext.createOscillator();
+      const gain = audioContext.createGain();
+
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(freq, audioContext.currentTime);
+
+      gain.gain.setValueAtTime(0.3, audioContext.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.0001, audioContext.currentTime + 3.5);
+
+      osc.connect(gain);
+      gain.connect(audioContext.destination);
+
+      osc.start();
+      osc.stop(audioContext.currentTime + 3.5);
+    }
+
+    audioToggleBtn.addEventListener('click', () => {
+      if (!isAudioPlaying) {
+        isAudioPlaying = true;
+        audioLabel.textContent = 'Mute Chimes';
+        audioToggleBtn.classList.add('bg-gold/30', 'text-gold-light');
+        playSacredChime(587.33); // D5
+        setTimeout(() => playSacredChime(440), 600); // A4
+        setTimeout(() => playSacredChime(880), 1200); // A5
+
+        chimeInterval = setInterval(() => {
+          const notes = [440, 528, 587.33, 659.25, 880];
+          const randomNote = notes[Math.floor(Math.random() * notes.length)];
+          playSacredChime(randomNote);
+        }, 5000);
+      } else {
+        isAudioPlaying = false;
+        audioLabel.textContent = 'Sacred Chimes';
+        audioToggleBtn.classList.remove('bg-gold/30', 'text-gold-light');
+        if (chimeInterval) clearInterval(chimeInterval);
+      }
+    });
+  </script>
+</body>
+</html>
