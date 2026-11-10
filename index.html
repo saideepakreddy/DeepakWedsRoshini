@@ -139,4 +139,430 @@
             <linearGradient id="divineGold" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stop-color="#FFF8DE" />
               <stop offset="40%" stop-color="#D4AF37" />
-              <stop offset="80%" stop-
+              <stop offset="80%" stop-color="#B38728" />
+              <stop offset="100%" stop-color="#6B4B10" />
+            </linearGradient>
+            <radialGradient id="haloGlow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#FFDF73" stop-opacity="0.35" />
+              <stop offset="100%" stop-color="#FFDF73" stop-opacity="0" />
+            </radialGradient>
+          </defs>
+          <circle cx="80" cy="80" r="74" fill="url(#haloGlow)" />
+          <circle cx="80" cy="80" r="70" stroke="url(#divineGold)" stroke-width="1.5" stroke-dasharray="4 2" opacity="0.85" />
+          
+          <!-- Seated Calligraphic Line-Art Ganesha -->
+          <path d="M80 32 L86 44 L74 44 Z" fill="url(#divineGold)" />
+          <path d="M68 54 C68 44, 92 44, 92 54 C92 68, 88 78, 80 82 C72 78, 68 68, 68 54 Z" fill="url(#divineGold)" stroke="#6B4B10" stroke-width="0.8" />
+          <path d="M77 50 L83 50 L81 60 L79 60 Z" fill="#FFFBE6" />
+          <circle cx="80" cy="55" r="2" fill="#C5182D" />
+          <!-- Ears -->
+          <path d="M68 56 C52 54, 45 70, 52 84 C56 90, 64 88, 68 76 Z" fill="url(#divineGold)" stroke="#6B4B10" stroke-width="0.7" />
+          <path d="M92 56 C108 54, 115 70, 108 84 C104 90, 96 88, 92 76 Z" fill="url(#divineGold)" stroke="#6B4B10" stroke-width="0.7" />
+          <!-- Trunk -->
+          <path d="M76 68 C74 84, 82 92, 92 88 C98 85, 99 77, 94 76 C91 75, 91 80, 94 80 C97 80, 95 84, 90 85 C83 87, 78 80, 80 68 Z" fill="url(#divineGold)" />
+          <!-- Modak / Blessings Hand -->
+          <path d="M62 88 C62 82, 70 80, 74 86 C78 92, 72 104, 62 102 Z" fill="url(#divineGold)" />
+          <path d="M98 88 C98 82, 90 80, 86 86 C82 92, 88 104, 98 102 Z" fill="url(#divineGold)" />
+          <circle cx="94" cy="94" r="3.5" fill="#FFFBE6" />
+          <!-- Seated Lotus Base -->
+          <path d="M52 112 C64 118, 96 118, 108 112 C116 118, 122 128, 122 128 C122 128, 92 132, 80 132 C68 132, 38 128, 38 128 C38 128, 44 118, 52 112 Z" fill="url(#divineGold)" stroke="#6B4B10" stroke-width="0.8" />
+        </svg>
+      </div>
+
+      <!-- Sanskrit & Telugu Traditional Blessings -->
+      <div id="editable-invocations" class="editable-content space-y-1">
+        <p class="text-[12px] tracking-widest text-gold-light uppercase font-marcellus">Srirasthu ! Shubhamasthu !! Avighnamasthu !!!</p>
+        <p class="text-sm font-telugu text-gold tracking-wider">|| శ్రీరస్తు - శుభమస్తు - అవిఘ్నమస్తు ||</p>
+      </div>
+
+      <h1 class="text-2xl font-cinzel text-white tracking-widest uppercase mt-3 font-semibold drop-shadow">Wedding Invitation</h1>
+    </header>
+
+    <!-- Inner Paper Body -->
+    <div class="px-6 pt-7 text-center relative">
+
+      <!-- Invitation Wording -->
+      <div class="max-w-xs mx-auto mb-6">
+        <p id="editable-invite-text" class="editable-content font-marcellus text-stone-700 leading-relaxed text-sm">
+          Together with our families, we joyfully invite you to share in our happiness and grace the auspicious occasion of our wedding
+        </p>
+      </div>
+
+      <!-- Couple Showcase -->
+      <section class="py-2 mb-6">
+        <!-- Groom First -->
+        <div class="space-y-1 mb-3">
+          <p class="text-xs uppercase font-cinzel tracking-widest text-gold-dark font-bold">Groom</p>
+          <h2 id="editable-groom" class="editable-content text-2xl font-cinzel font-bold text-maroon-deep tracking-wide">
+            Chi. Sai Deepak Reddy
+          </h2>
+          <p id="editable-groom-parents" class="editable-content text-xs font-marcellus text-stone-600 italic px-4 leading-normal mt-1">
+            (Elder S/o. Sri Gutha Chinna Kanna Reddy &amp; Smt. Sukanya, R/o. Nalgonda)
+          </p>
+        </div>
+
+        <div class="flex items-center justify-center my-3 gap-3">
+          <span class="h-[1px] w-12 bg-gradient-to-r from-transparent to-gold"></span>
+          <span class="font-script text-2xl text-gold-metallic">with</span>
+          <span class="h-[1px] w-12 bg-gradient-to-l from-transparent to-gold"></span>
+        </div>
+
+        <!-- Bride -->
+        <div class="space-y-1">
+          <p class="text-xs uppercase font-cinzel tracking-widest text-gold-dark font-bold">Bride</p>
+          <h2 id="editable-bride" class="editable-content text-2xl font-cinzel font-bold text-maroon-deep tracking-wide">
+            Chi.La.Sow. Roshini Reddy
+          </h2>
+          <p id="editable-bride-parents" class="editable-content text-xs font-marcellus text-stone-600 italic px-4 leading-normal mt-1">
+            (Younger D/o. Sri Kunchala Vittal Reddy &amp; Smt. Suvarna, R/o. Hanumakonda)
+          </p>
+        </div>
+      </section>
+
+      <!-- Multi-Day Events Itinerary Section -->
+      <section class="space-y-4 mb-6">
+        <!-- Pellikoduku Lunch -->
+        <div class="bg-gradient-to-r from-maroon/5 via-gold/10 to-maroon/5 rounded-xl border border-gold/30 p-4 text-center">
+          <span class="px-2.5 py-0.5 rounded-full bg-maroon text-gold-light text-[10px] font-cinzel uppercase tracking-widest font-bold">
+            Pellikoduku Lunch
+          </span>
+          <p class="text-sm font-cinzel font-bold text-maroon-deep mt-1">
+            Thursday, 19th November 2026
+          </p>
+        </div>
+
+        <!-- Sumuhurtham Gold Highlight Box -->
+        <div class="bg-gradient-to-r from-maroon/5 via-gold/15 to-maroon/5 rounded-xl border border-gold/40 p-4 text-center">
+          <span class="px-2.5 py-0.5 rounded-full bg-maroon text-gold-light text-[10px] font-cinzel uppercase tracking-widest font-bold">
+            Sumuhurtham
+          </span>
+          <p class="text-sm font-cinzel font-bold text-maroon-deep mt-1">
+            Friday, 20th November 2026
+          </p>
+          <p class="text-xs font-marcellus text-stone-800 font-semibold mt-0.5">
+            at 11-23 a.m. <span class="text-maroon font-bold font-cinzel">"Makara Lagnam"</span>
+          </p>
+          <p class="text-xs font-marcellus text-stone-600 mt-1">
+            Vivanta Grand Banquets<br>4440 State Hwy 121 Ste 25, Lewisville, TX 75056
+          </p>
+        </div>
+
+        <!-- Reception Dinner -->
+        <div class="bg-gradient-to-r from-maroon/5 via-gold/10 to-maroon/5 rounded-xl border border-gold/30 p-4 text-center">
+          <span class="px-2.5 py-0.5 rounded-full bg-maroon text-gold-light text-[10px] font-cinzel uppercase tracking-widest font-bold">
+            Reception Dinner
+          </span>
+          <p class="text-sm font-cinzel font-bold text-maroon-deep mt-1">
+            Saturday, 21st November 2026
+          </p>
+          <p class="text-xs font-marcellus text-stone-600 mt-1">
+            865 Higgins Rd, Sherman, TX 75092
+          </p>
+        </div>
+      </section>
+
+      <!-- Primary Action Buttons -->
+      <div class="space-y-3 px-2 mb-8">
+        <!-- RSVP Direct WithJoy Button -->
+        <a id="rsvpButton" href="https://withjoy.com/saideepak-and-roshini/rsvp?v=1" target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-gold-light bg-gradient-to-r from-maroon-deep via-maroon to-maroon-deep border border-gold/50 shadow-md font-cinzel text-sm font-bold tracking-widest uppercase hover:brightness-110 active:scale-[0.98] transition">
+          <svg class="w-4 h-4 text-gold" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path></svg>
+          RSVP
+        </a>
+
+        <!-- Directions & Calendar Grid -->
+        <div class="grid grid-cols-2 gap-2 text-xs font-marcellus">
+          <a id="mapsButton" href="https://maps.google.com/?q=Vivanta+Grand+Banquets+4440+State+Hwy+121+Ste+25+Lewisville+Tx+75056" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg border border-maroon/20 bg-white text-maroon hover:bg-stone-50 transition shadow-sm font-semibold">
+            <svg class="w-4 h-4 text-maroon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+            Directions
+          </a>
+          <button onclick="downloadCalendarInvite()" class="flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg border border-maroon/20 bg-white text-maroon hover:bg-stone-50 transition shadow-sm font-semibold">
+            <svg class="w-4 h-4 text-maroon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+            Add to Calendar
+          </button>
+        </div>
+      </div>
+
+      <!-- Invited By Section -->
+      <footer class="pt-5 border-t border-gold/30 space-y-2">
+        <p class="text-[11px] font-cinzel uppercase tracking-widest text-gold-dark font-bold">Invited by</p>
+        <p id="editable-invited-by" class="editable-content text-sm font-cinzel font-bold text-maroon-deep">
+          Sai Deepak Reddy and Roshini Reddy
+        </p>
+
+        <!-- Phone Contacts -->
+        <div class="flex items-center justify-center gap-3 text-xs font-sans text-stone-700 pt-1">
+          <a id="phone1" href="tel:4697566371" class="hover:text-maroon underline font-medium">469-756-6371</a>
+          <span class="text-gold">•</span>
+          <a id="phone2" href="tel:3305544339" class="hover:text-maroon underline font-medium">330-554-4339</a>
+        </div>
+
+        <p id="editable-compliments" class="editable-content text-xs font-marcellus text-stone-500 italic pt-3">
+          With Best Compliments From : Near &amp; Dear
+        </p>
+      </footer>
+    </div>
+  </main>
+
+  <!-- Settings Drawer Modal for Owner -->
+  <div id="adminDrawer" class="hidden fixed inset-0 z-50 bg-black/60 flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-sm w-full p-5 space-y-4 shadow-2xl text-left border border-gold">
+      <div class="flex justify-between items-center border-b pb-2">
+        <h4 class="font-cinzel font-bold text-maroon text-base">Invite Settings</h4>
+        <button onclick="toggleAdminDrawer()" class="text-stone-400 hover:text-stone-700 font-bold">✕</button>
+      </div>
+
+      <div class="space-y-3 text-xs">
+        <div>
+          <label class="block font-semibold text-stone-700 mb-1">WithJoy RSVP URL</label>
+          <input type="url" id="settingRsvpUrl" value="https://withjoy.com/saideepak-and-roshini/rsvp?v=1" class="w-full p-2 border rounded border-stone-300 font-sans text-xs focus:border-gold outline-none" />
+        </div>
+        <div>
+          <label class="block font-semibold text-stone-700 mb-1">Google Maps URL</label>
+          <input type="url" id="settingMapsUrl" value="https://maps.google.com/?q=Vivanta+Grand+Banquets+4440+State+Hwy+121+Ste+25+Lewisville+Tx+75056" class="w-full p-2 border rounded border-stone-300 font-sans text-xs focus:border-gold outline-none" />
+        </div>
+        <div>
+          <label class="block font-semibold text-stone-700 mb-1">YouTube Video ID (Nadaswaram)</label>
+          <input type="text" id="settingYoutubeId" value="6PvWIMRqAL0" class="w-full p-2 border rounded border-stone-300 font-sans text-xs focus:border-gold outline-none" />
+        </div>
+      </div>
+
+      <div class="pt-2 flex gap-2">
+        <button onclick="applyDrawerSettings()" class="flex-1 py-2 bg-maroon text-gold-light rounded font-cinzel text-xs font-bold">Save Settings</button>
+        <button onclick="toggleAdminDrawer()" class="px-3 py-2 border rounded text-xs">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- YouTube IFrame API Script -->
+  <script src="https://www.youtube.com/iframe_api"></script>
+
+  <script>
+    // --- YouTube Background Audio Controller (Auto-plays after 3 seconds) ---
+    let ytPlayer;
+    let isPlaying = false;
+    let audioInitialized = false;
+    const defaultYoutubeId = "6PvWIMRqAL0"; // Mahaganapathim Nadaswaram
+
+    function onYouTubeIframeAPIReady() {
+      const videoId = localStorage.getItem('wedding_yt_id') || defaultYoutubeId;
+      ytPlayer = new YT.Player('youtube-player', {
+        height: '0',
+        width: '0',
+        videoId: videoId,
+        playerVars: {
+          autoplay: 1,
+          mute: 0,
+          controls: 0,
+          loop: 1,
+          playlist: videoId,
+          playsinline: 1
+        },
+        events: {
+          'onReady': onPlayerReady,
+          'onStateChange': onPlayerStateChange
+        }
+      });
+    }
+
+    function onPlayerReady(event) {
+      // Auto-play music after a 3-second delay
+      setTimeout(() => {
+        if (!audioInitialized && ytPlayer && ytPlayer.playVideo) {
+          ytPlayer.playVideo();
+          audioInitialized = true;
+        }
+      }, 3000);
+
+      // Fallback: Trigger on first interaction if browser blocks auto-play
+      const startAudio = () => {
+        if (!audioInitialized && ytPlayer && ytPlayer.playVideo) {
+          ytPlayer.playVideo();
+          audioInitialized = true;
+          document.removeEventListener('click', startAudio);
+          document.removeEventListener('touchstart', startAudio);
+          document.removeEventListener('scroll', startAudio);
+        }
+      };
+
+      document.addEventListener('click', startAudio, { once: true });
+      document.addEventListener('touchstart', startAudio, { once: true });
+      document.addEventListener('scroll', startAudio, { once: true });
+    }
+
+    function onPlayerStateChange(event) {
+      const label = document.getElementById('musicLabel');
+      const eq = document.getElementById('soundEqualizer');
+
+      if (event.data === YT.PlayerState.PLAYING) {
+        isPlaying = true;
+        label.innerText = "Nadaswaram Playing";
+        eq.classList.remove('opacity-50');
+      } else {
+        isPlaying = false;
+        label.innerText = "Play Nadaswaram";
+        eq.classList.add('opacity-50');
+      }
+    }
+
+    function toggleAudio() {
+      if (!ytPlayer || !ytPlayer.pauseVideo) return;
+      if (isPlaying) {
+        ytPlayer.pauseVideo();
+      } else {
+        ytPlayer.playVideo();
+        audioInitialized = true;
+      }
+    }
+
+    // --- Custom Modal Helpers ---
+    function showModal(title, message) {
+      document.getElementById('modalTitle').innerText = title;
+      document.getElementById('modalMessage').innerText = message;
+      document.getElementById('customModal').classList.remove('hidden');
+    }
+
+    function closeModal() {
+      document.getElementById('customModal').classList.add('hidden');
+    }
+
+    // --- Admin Secret Unlock Mechanism ---
+    let tapCount = 0;
+    let tapTimer = null;
+
+    function handleGaneshaTap() {
+      tapCount++;
+      clearTimeout(tapTimer);
+      tapTimer = setTimeout(() => { tapCount = 0; }, 1200);
+
+      if (tapCount === 3) {
+        tapCount = 0;
+        const pin = prompt("Enter Admin PIN to edit invite:");
+        if (pin === "1234") {
+          enableAdminMode();
+        } else if (pin !== null) {
+          showModal("Incorrect PIN", "The PIN entered is incorrect.");
+        }
+      }
+    }
+
+    // Check URL parameters & Cache Migration Version
+    window.addEventListener('DOMContentLoaded', () => {
+      const currentVersion = 'v7_elder_younger_pair';
+      if (localStorage.getItem('invite_version') !== currentVersion) {
+        localStorage.removeItem('wedding_invite_content');
+        localStorage.setItem('invite_version', currentVersion);
+      }
+
+      loadSavedContent();
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('edit') === 'true' || params.get('admin') === '1234') {
+        enableAdminMode();
+      }
+    });
+
+    function enableAdminMode() {
+      document.getElementById('adminBar').classList.remove('hidden');
+      document.querySelectorAll('.editable-content').forEach(el => {
+        el.setAttribute('contenteditable', 'true');
+      });
+    }
+
+    function exitAdminMode() {
+      document.getElementById('adminBar').classList.add('hidden');
+      document.querySelectorAll('.editable-content').forEach(el => {
+        el.removeAttribute('contenteditable');
+      });
+    }
+
+    function saveAllChanges() {
+      const content = {};
+      document.querySelectorAll('.editable-content').forEach(el => {
+        content[el.id] = el.innerHTML;
+      });
+      localStorage.setItem('wedding_invite_content', JSON.stringify(content));
+      showModal("Saved", "All changes saved successfully!");
+    }
+
+    function loadSavedContent() {
+      const saved = localStorage.getItem('wedding_invite_content');
+      if (saved) {
+        try {
+          const content = JSON.parse(saved);
+          Object.keys(content).forEach(id => {
+            const el = document.getElementById(id);
+            if (el) el.innerHTML = content[id];
+          });
+        } catch (e) {
+          console.error("Error loading saved content", e);
+        }
+      }
+
+      const savedRsvp = localStorage.getItem('wedding_rsvp_url');
+      if (savedRsvp) {
+        document.getElementById('rsvpButton').href = savedRsvp;
+        document.getElementById('settingRsvpUrl').value = savedRsvp;
+      }
+
+      const savedMaps = localStorage.getItem('wedding_maps_url');
+      if (savedMaps) {
+        document.getElementById('mapsButton').href = savedMaps;
+        document.getElementById('settingMapsUrl').value = savedMaps;
+      }
+    }
+
+    function toggleAdminDrawer() {
+      const drawer = document.getElementById('adminDrawer');
+      drawer.classList.toggle('hidden');
+    }
+
+    function applyDrawerSettings() {
+      const rsvp = document.getElementById('settingRsvpUrl').value;
+      const maps = document.getElementById('settingMapsUrl').value;
+      const ytId = document.getElementById('settingYoutubeId').value;
+
+      localStorage.setItem('wedding_rsvp_url', rsvp);
+      localStorage.setItem('wedding_maps_url', maps);
+      localStorage.setItem('wedding_yt_id', ytId);
+
+      document.getElementById('rsvpButton').href = rsvp;
+      document.getElementById('mapsButton').href = maps;
+
+      if (ytPlayer && ytPlayer.loadVideoById) {
+        ytPlayer.loadVideoById(ytId);
+      }
+
+      toggleAdminDrawer();
+      showModal("Settings Applied", "Your invitation settings have been updated.");
+    }
+
+    // --- Dynamic Calendar Invite Generator (.ics) ---
+    function downloadCalendarInvite() {
+      const icsData = 
+`BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//SaiDeepak & Roshini Wedding//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:wedding-saideepak-roshini-2026@celebration
+DTSTAMP:20261106T000000Z
+DTSTART:20261120T172300Z
+DTEND:20261120T210000Z
+SUMMARY:Wedding of Chi. Sai Deepak Reddy & Chi.La.Sow. Roshini Reddy
+DESCRIPTION:Sumuhurtham at 11:23 AM (Makara Lagnam).\\nRSVP & Details: https://withjoy.com/saideepak-and-roshini/rsvp?v=1
+LOCATION:Vivanta Grand Banquets, 4440 State Hwy 121 Ste 25, Lewisville, TX 75056
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR`;
+
+      const blob = new Blob([icsData], { type: 'text/calendar;charset=utf-8' });
+      const link = document.createElement('a');
+      link.href = window.URL.createObjectURL(blob);
+      link.setAttribute('download', 'SaiDeepak_Roshini_Wedding.ics');
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  </script>
+</body>
+</html>
