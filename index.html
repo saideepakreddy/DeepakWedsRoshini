@@ -133,13 +133,18 @@
       <div class="absolute top-2 left-2 w-12 h-12 border-t-2 border-l-2 border-gold/40 pointer-events-none"></div>
       <div class="absolute top-2 right-2 w-12 h-12 border-t-2 border-r-2 border-gold/40 pointer-events-none"></div>
 
-      <!-- Sacred Seated Ganesha Medallion (Triple-Tap to unlock owner editor) -->
-      <div id="ganeshaLogoContainer" onclick="handleGaneshaTap()" title="Triple-tap to open admin editor" class="cursor-pointer mx-auto w-24 h-24 rounded-full bg-gradient-to-b from-maroon-light to-maroon-deep border-2 border-gold p-1 shadow-lg flex items-center justify-center relative mb-3 hover:scale-105 transition-transform duration-300 overflow-hidden">
+      <!-- Sacred Seated Ganesha Circular Emblem -->
+      <div 
+        id="ganeshaLogoContainer" 
+        onclick="handleGaneshaTap()" 
+        title="Triple-tap to open admin editor" 
+        class="cursor-pointer mx-auto w-24 h-24 aspect-square shrink-0 rounded-full bg-gradient-to-b from-maroon-light to-maroon-deep border-2 border-gold shadow-[0_4px_20px_rgba(212,175,55,0.3)] flex items-center justify-center relative mb-4 p-2 hover:scale-105 transition-transform duration-300 overflow-hidden"
+      >
         <img 
           id="ganeshaEmblemImg" 
           src="https://raw.githubusercontent.com/saideepakreddy/DeepakWedsRoshini/main/ganesh-logo.png" 
           alt="Lord Ganesha Emblem" 
-          class="w-full h-full object-contain p-1 drop-shadow" 
+          class="w-full h-full aspect-square object-contain rounded-full drop-shadow select-none pointer-events-none" 
           onerror="this.onerror=null; this.src='ganesh-logo.png';" 
         />
       </div>
@@ -165,7 +170,7 @@
 
       <!-- Couple Showcase -->
       <section class="py-2 mb-6">
-        <!-- Groom -->
+        <!-- Groom First -->
         <div class="space-y-1 mb-3">
           <p class="text-xs uppercase font-cinzel tracking-widest text-gold-dark font-bold">Groom</p>
           <h2 id="editable-groom" class="editable-content text-2xl font-cinzel font-bold text-maroon-deep tracking-wide">
@@ -442,7 +447,7 @@
 
     // Check URL parameters & Cache Migration Version
     window.addEventListener('DOMContentLoaded', () => {
-      const currentVersion = 'v9_cdn_logo_multi_event';
+      const currentVersion = 'v10_perfect_circle_logo';
       if (localStorage.getItem('invite_version') !== currentVersion) {
         localStorage.removeItem('wedding_invite_content');
         localStorage.setItem('invite_version', currentVersion);
