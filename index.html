@@ -9,6 +9,7 @@
   <meta property="og:title" content="Wedding Invitation | Sai Deepak Reddy & Roshini Reddy" />
   <meta property="og:description" content="Sumuhurtham: Friday, 20th November 2026 at 11:23 AM (Makara Lagnam). Vivanta Grand Banquets, Lewisville, TX." />
   <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://raw.githubusercontent.com/saideepakreddy/DeepakWedsRoshini/main/ganesh-logo.png" />
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -102,7 +103,7 @@
     </button>
   </div>
 
-  <!-- Admin Bar (Hidden by default, shown when unlocked) -->
+  <!-- Admin Bar (Hidden by default, shown when unlocked via triple-tap PIN: 1234) -->
   <div id="adminBar" class="hidden fixed bottom-4 left-1/2 -translate-x-1/2 z-50 bg-stone-900/95 border border-gold text-white px-4 py-2.5 rounded-full shadow-2xl flex items-center gap-3 backdrop-blur-md">
     <span class="text-xs text-gold flex items-center gap-1 font-marcellus">
       <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"></path></svg>
@@ -126,33 +127,21 @@
   <main class="w-full max-w-[460px] bg-ivory rounded-2xl overflow-hidden maroon-card-shadow relative border border-gold/40 my-auto pb-10">
     
     <!-- Top Royal Header -->
-    <header class="bg-gradient-to-b from-maroon-deep via-maroon to-maroon-deep text-center pt-8 pb-7 px-4 relative overflow-hidden">
+    <header class="bg-gradient-to-b from-maroon-deep to-maroon text-center pt-8 pb-7 px-4 relative overflow-hidden">
       <!-- Decorative Arch Motif & Corner Filigree Scrollwork -->
       <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#D4AF37_1px,transparent_1px)] [background-size:12px_12px] pointer-events-none"></div>
-      
-      <!-- Top-Left & Top-Right Golden Filigree Corner Scrollwork -->
-      <svg class="w-16 h-16 absolute top-2 left-2 text-gold opacity-80 pointer-events-none" viewBox="0 0 100 100" fill="none">
-        <path d="M4 96 V20 C4 10 10 4 20 4 H96" stroke="currentColor" stroke-width="1.5"/>
-        <path d="M10 80 V24 C10 15 15 10 24 10 H80" stroke="currentColor" stroke-width="0.8"/>
-        <path d="M4 35 C18 35 35 18 35 4" stroke="currentColor" stroke-width="1.2"/>
-        <circle cx="20" cy="20" r="3" fill="currentColor"/>
-        <circle cx="96" cy="4" r="2.5" fill="currentColor"/>
-        <circle cx="4" cy="96" r="2.5" fill="currentColor"/>
-      </svg>
-      <svg class="w-16 h-16 absolute top-2 right-2 text-gold opacity-80 pointer-events-none scale-x-[-1]" viewBox="0 0 100 100" fill="none">
-        <path d="M4 96 V20 C4 10 10 4 20 4 H96" stroke="currentColor" stroke-width="1.5"/>
-        <path d="M10 80 V24 C10 15 15 10 24 10 H80" stroke="currentColor" stroke-width="0.8"/>
-        <path d="M4 35 C18 35 35 18 35 4" stroke="currentColor" stroke-width="1.2"/>
-        <circle cx="20" cy="20" r="3" fill="currentColor"/>
-        <circle cx="96" cy="4" r="2.5" fill="currentColor"/>
-        <circle cx="4" cy="96" r="2.5" fill="currentColor"/>
-      </svg>
+      <div class="absolute top-2 left-2 w-12 h-12 border-t-2 border-l-2 border-gold/40 pointer-events-none"></div>
+      <div class="absolute top-2 right-2 w-12 h-12 border-t-2 border-r-2 border-gold/40 pointer-events-none"></div>
 
       <!-- Sacred Seated Ganesha Medallion (Triple-Tap to unlock owner editor) -->
-      <div id="ganeshaLogoContainer" onclick="handleGaneshaTap()" title="Triple-tap to open admin editor" class="cursor-pointer mx-auto w-28 h-28 rounded-full bg-gradient-to-b from-maroon-light via-maroon to-maroon-deep border-2 border-gold p-1 shadow-2xl flex items-center justify-center relative mb-3 hover:scale-105 transition-transform duration-300 overflow-hidden">
-        <div id="customGaneshaImageWrapper" class="w-full h-full flex items-center justify-center">
-          <img id="ganeshaImg" src="ganesh-logo.png" alt="Lord Ganesha Emblem" class="w-20 h-20 object-contain drop-shadow" onerror="this.onerror=null; this.src='https://placehold.co/100x100/580814/D4AF37?text=Ganesha';" />
-        </div>
+      <div id="ganeshaLogoContainer" onclick="handleGaneshaTap()" title="Triple-tap to open admin editor" class="cursor-pointer mx-auto w-24 h-24 rounded-full bg-gradient-to-b from-maroon-light to-maroon-deep border-2 border-gold p-1 shadow-lg flex items-center justify-center relative mb-3 hover:scale-105 transition-transform duration-300 overflow-hidden">
+        <img 
+          id="ganeshaEmblemImg" 
+          src="https://raw.githubusercontent.com/saideepakreddy/DeepakWedsRoshini/main/ganesh-logo.png" 
+          alt="Lord Ganesha Emblem" 
+          class="w-full h-full object-contain p-1 drop-shadow" 
+          onerror="this.onerror=null; this.src='ganesh-logo.png';" 
+        />
       </div>
 
       <!-- Sanskrit & Telugu Traditional Blessings -->
@@ -167,7 +156,7 @@
     <!-- Inner Paper Body -->
     <div class="px-6 pt-7 text-center relative">
 
-      <!-- Invitation Wording (Couple Hosted) -->
+      <!-- Invitation Wording -->
       <div class="max-w-xs mx-auto mb-6">
         <p id="editable-invite-text" class="editable-content font-marcellus text-stone-700 leading-relaxed text-sm">
           Together with our families, we joyfully invite you to share in our happiness and grace the auspicious occasion of our wedding
@@ -176,7 +165,7 @@
 
       <!-- Couple Showcase -->
       <section class="py-2 mb-6">
-        <!-- Groom First -->
+        <!-- Groom -->
         <div class="space-y-1 mb-3">
           <p class="text-xs uppercase font-cinzel tracking-widest text-gold-dark font-bold">Groom</p>
           <h2 id="editable-groom" class="editable-content text-2xl font-cinzel font-bold text-maroon-deep tracking-wide">
@@ -205,59 +194,57 @@
         </div>
       </section>
 
-      <!-- Multi-Day Events Itinerary Section -->
-      <section class="space-y-4 mb-6">
-        <!-- Pellikoduku Lunch -->
+      <!-- Multi-Day Events Section -->
+      <section class="space-y-4 mb-7 text-left">
+
+        <!-- 1. Pellikoduku Lunch -->
         <div class="bg-gradient-to-r from-maroon/5 via-gold/10 to-maroon/5 rounded-xl border border-gold/30 p-4 text-center">
-          <span class="px-2.5 py-0.5 rounded-full bg-maroon text-gold-light text-[10px] font-cinzel uppercase tracking-widest font-bold">
+          <span class="inline-block px-2.5 py-0.5 rounded-full bg-maroon text-gold-light text-[10px] font-cinzel uppercase tracking-widest font-bold mb-1">
             Pellikoduku Lunch
           </span>
-          <p class="text-sm font-cinzel font-bold text-maroon-deep mt-1">
+          <p class="text-sm font-cinzel font-bold text-maroon-deep">
             Thursday, 19th November 2026
           </p>
-          <p class="text-xs font-marcellus text-stone-600 mt-1">
+          <p class="text-xs font-marcellus text-stone-700 mt-1">
             865 Higgins Rd, Sherman, TX 75092
           </p>
-          <div class="mt-2.5">
-            <a href="https://maps.google.com/?q=865+Higgins+Rd,+Sherman,+TX+75092" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 py-1.5 px-3 rounded-lg border border-maroon/20 bg-white text-maroon hover:bg-stone-50 transition shadow-sm text-xs font-marcellus font-semibold">
+          <div class="mt-3 flex justify-center">
+            <a href="https://maps.google.com/?q=865+Higgins+Rd+Sherman+TX+75092" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 py-1.5 px-3 rounded-lg border border-maroon/20 bg-white text-maroon hover:bg-stone-50 transition shadow-sm text-xs font-marcellus font-semibold">
               <svg class="w-3.5 h-3.5 text-maroon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
               Directions
             </a>
           </div>
         </div>
 
-        <!-- Sumuhurtham Gold Highlight Box (Marriage Ceremony with RSVP) -->
-        <div class="bg-gradient-to-r from-maroon/5 via-gold/20 to-maroon/5 rounded-xl border-2 border-gold/60 p-4 sm:p-5 text-center shadow-sm relative overflow-hidden">
-          <div class="inline-block px-3 py-0.5 rounded-full bg-maroon text-gold-light text-[11px] font-cinzel uppercase tracking-widest font-bold mb-1 shadow-sm">
+        <!-- 2. Sumuhurtham (Wedding Ceremony) with RSVP -->
+        <div class="bg-gradient-to-r from-maroon/5 via-gold/15 to-maroon/5 rounded-xl border-2 border-gold/50 p-4 text-center shadow-sm">
+          <span class="inline-block px-3 py-0.5 rounded-full bg-maroon text-gold-light text-[11px] font-cinzel uppercase tracking-widest font-bold mb-1">
             Sumuhurtham (Wedding)
-          </div>
-          <p class="text-base font-cinzel font-bold text-maroon-deep mt-0.5">
+          </span>
+          <p class="text-base font-cinzel font-bold text-maroon-deep">
             Friday, 20th November 2026
           </p>
           <p class="text-xs font-marcellus text-stone-800 font-semibold mt-0.5">
-            at 11:23 AM <span class="text-maroon font-bold font-cinzel">"Makara Lagnam"</span>
+            at 11-23 a.m. <span class="text-maroon font-bold font-cinzel">"Makara Lagnam"</span>
           </p>
-          <p class="text-xs font-marcellus text-stone-600 mt-1 leading-relaxed">
-            Vivanta Grand Banquets<br>4440 State Hwy 121 Ste 25, Lewisville, TX 75056
-          </p>
+          <div class="mt-2 text-xs font-marcellus text-stone-700">
+            <p class="font-cinzel font-bold text-maroon">Vivanta Grand Banquets</p>
+            <p class="text-stone-600">4440 State Hwy 121 Ste 25, Lewisville, TX 75056</p>
+          </div>
 
-          <!-- RSVP (For Marriage Ceremony Only) -->
-          <div class="mt-4 pt-3 border-t border-gold/40 space-y-2">
-            <p class="text-[10px] font-cinzel uppercase tracking-widest text-maroon-deep font-bold">
-              Kindly RSVP for Marriage Ceremony
-            </p>
-            <a id="rsvpButton" href="https://withjoy.com/saideepak-and-roshini/rsvp?v=1" target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-gold-light bg-gradient-to-r from-maroon-deep via-maroon to-maroon-deep border border-gold/60 shadow-md font-cinzel text-xs font-bold tracking-widest uppercase hover:brightness-110 active:scale-[0.98] transition">
+          <!-- Wedding Actions: RSVP, Directions, Calendar -->
+          <div class="mt-4 space-y-2">
+            <a id="rsvpButton" href="https://withjoy.com/saideepak-and-roshini/rsvp?v=1" target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-gold-light bg-gradient-to-r from-maroon-deep via-maroon to-maroon-deep border border-gold/50 shadow font-cinzel text-xs font-bold tracking-widest uppercase hover:brightness-110 active:scale-[0.98] transition">
               <svg class="w-3.5 h-3.5 text-gold" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path></svg>
-              RSVP for Marriage Ceremony
+              RSVP for Marriage
             </a>
 
-            <!-- Directions & Calendar Grid for Marriage -->
-            <div class="grid grid-cols-2 gap-2 text-xs font-marcellus pt-1">
-              <a id="mapsButton" href="https://maps.google.com/?q=Vivanta+Grand+Banquets+4440+State+Hwy+121+Ste+25+Lewisville+Tx+75056" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-1.5 py-2 px-2.5 rounded-lg border border-maroon/20 bg-white text-maroon hover:bg-stone-50 transition shadow-sm font-semibold text-[11px]">
+            <div class="grid grid-cols-2 gap-2 text-xs font-marcellus">
+              <a id="mapsButton" href="https://maps.google.com/?q=Vivanta+Grand+Banquets+4440+State+Hwy+121+Ste+25+Lewisville+Tx+75056" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg border border-maroon/20 bg-white text-maroon hover:bg-stone-50 transition shadow-sm font-semibold">
                 <svg class="w-3.5 h-3.5 text-maroon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                 Directions
               </a>
-              <button onclick="downloadCalendarInvite()" class="flex items-center justify-center gap-1.5 py-2 px-2.5 rounded-lg border border-maroon/20 bg-white text-maroon hover:bg-stone-50 transition shadow-sm font-semibold text-[11px]">
+              <button onclick="downloadCalendarInvite()" class="flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg border border-maroon/20 bg-white text-maroon hover:bg-stone-50 transition shadow-sm font-semibold">
                 <svg class="w-3.5 h-3.5 text-maroon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
                 Add to Calendar
               </button>
@@ -265,24 +252,25 @@
           </div>
         </div>
 
-        <!-- Reception Dinner -->
+        <!-- 3. Reception Dinner -->
         <div class="bg-gradient-to-r from-maroon/5 via-gold/10 to-maroon/5 rounded-xl border border-gold/30 p-4 text-center">
-          <span class="px-2.5 py-0.5 rounded-full bg-maroon text-gold-light text-[10px] font-cinzel uppercase tracking-widest font-bold">
+          <span class="inline-block px-2.5 py-0.5 rounded-full bg-maroon text-gold-light text-[10px] font-cinzel uppercase tracking-widest font-bold mb-1">
             Reception Dinner
           </span>
-          <p class="text-sm font-cinzel font-bold text-maroon-deep mt-1">
+          <p class="text-sm font-cinzel font-bold text-maroon-deep">
             Saturday, 21st November 2026
           </p>
-          <p class="text-xs font-marcellus text-stone-600 mt-1">
+          <p class="text-xs font-marcellus text-stone-700 mt-1">
             865 Higgins Rd, Sherman, TX 75092
           </p>
-          <div class="mt-2.5">
-            <a href="https://maps.google.com/?q=865+Higgins+Rd,+Sherman,+TX+75092" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 py-1.5 px-3 rounded-lg border border-maroon/20 bg-white text-maroon hover:bg-stone-50 transition shadow-sm text-xs font-marcellus font-semibold">
+          <div class="mt-3 flex justify-center">
+            <a href="https://maps.google.com/?q=865+Higgins+Rd+Sherman+TX+75092" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 py-1.5 px-3 rounded-lg border border-maroon/20 bg-white text-maroon hover:bg-stone-50 transition shadow-sm text-xs font-marcellus font-semibold">
               <svg class="w-3.5 h-3.5 text-maroon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
               Directions
             </a>
           </div>
         </div>
+
       </section>
 
       <!-- Invited By Section -->
@@ -316,6 +304,10 @@
 
       <div class="space-y-3 text-xs">
         <div>
+          <label class="block font-semibold text-stone-700 mb-1">Ganesha Image URL</label>
+          <input type="url" id="settingGaneshaUrl" value="https://raw.githubusercontent.com/saideepakreddy/DeepakWedsRoshini/main/ganesh-logo.png" class="w-full p-2 border rounded border-stone-300 font-sans text-xs focus:border-gold outline-none" />
+        </div>
+        <div>
           <label class="block font-semibold text-stone-700 mb-1">WithJoy RSVP URL</label>
           <input type="url" id="settingRsvpUrl" value="https://withjoy.com/saideepak-and-roshini/rsvp?v=1" class="w-full p-2 border rounded border-stone-300 font-sans text-xs focus:border-gold outline-none" />
         </div>
@@ -326,14 +318,6 @@
         <div>
           <label class="block font-semibold text-stone-700 mb-1">YouTube Video ID (Nadaswaram)</label>
           <input type="text" id="settingYoutubeId" value="6PvWIMRqAL0" class="w-full p-2 border rounded border-stone-300 font-sans text-xs focus:border-gold outline-none" />
-        </div>
-        <div>
-          <label class="block font-semibold text-stone-700 mb-1">Custom Ganesha Image URL or File</label>
-          <input type="url" id="settingGaneshaUrl" placeholder="Paste direct image URL" class="w-full p-2 border rounded border-stone-300 font-sans text-xs focus:border-gold outline-none" />
-          <div class="mt-1 flex items-center gap-2">
-            <span class="text-stone-400">or upload:</span>
-            <input type="file" id="settingGaneshaFile" accept="image/*" class="text-[11px] text-stone-500" onchange="handleGaneshaFileUpload(event)" />
-          </div>
         </div>
       </div>
 
@@ -348,7 +332,7 @@
   <script src="https://www.youtube.com/iframe_api"></script>
 
   <script>
-    // --- YouTube Background Audio Controller (Auto-plays after 3 seconds) ---
+    // --- YouTube Background Audio Controller (Starts after 3 seconds) ---
     let ytPlayer;
     let isPlaying = false;
     let audioInitialized = false;
@@ -376,7 +360,7 @@
     }
 
     function onPlayerReady(event) {
-      // Auto-play music after a 3-second delay
+      // Auto-play music after 3 seconds
       setTimeout(() => {
         if (!audioInitialized && ytPlayer && ytPlayer.playVideo) {
           ytPlayer.playVideo();
@@ -384,7 +368,7 @@
         }
       }, 3000);
 
-      // Fallback: Trigger on first interaction if mobile browser blocks auto-play
+      // Mobile Touch/Interaction Fallback
       const startAudio = () => {
         if (!audioInitialized && ytPlayer && ytPlayer.playVideo) {
           ytPlayer.playVideo();
@@ -458,7 +442,7 @@
 
     // Check URL parameters & Cache Migration Version
     window.addEventListener('DOMContentLoaded', () => {
-      const currentVersion = 'v11_final_itinerary_ganesh';
+      const currentVersion = 'v9_cdn_logo_multi_event';
       if (localStorage.getItem('invite_version') !== currentVersion) {
         localStorage.removeItem('wedding_invite_content');
         localStorage.setItem('invite_version', currentVersion);
@@ -508,6 +492,14 @@
         }
       }
 
+      const savedLogo = localStorage.getItem('wedding_ganesha_img');
+      if (savedLogo) {
+        const img = document.getElementById('ganeshaEmblemImg');
+        if (img) img.src = savedLogo;
+        const settingInput = document.getElementById('settingGaneshaUrl');
+        if (settingInput) settingInput.value = savedLogo;
+      }
+
       const savedRsvp = localStorage.getItem('wedding_rsvp_url');
       if (savedRsvp) {
         document.getElementById('rsvpButton').href = savedRsvp;
@@ -519,37 +511,6 @@
         document.getElementById('mapsButton').href = savedMaps;
         document.getElementById('settingMapsUrl').value = savedMaps;
       }
-
-      const savedGaneshaUrl = localStorage.getItem('wedding_ganesha_img');
-      if (savedGaneshaUrl) {
-        renderCustomGaneshaImage(savedGaneshaUrl);
-        const input = document.getElementById('settingGaneshaUrl');
-        if (input) input.value = savedGaneshaUrl;
-      }
-    }
-
-    function renderCustomGaneshaImage(src) {
-      const img = document.getElementById('ganeshaImg');
-      if (img && src) {
-        img.src = src;
-      } else {
-        const wrapper = document.getElementById('customGaneshaImageWrapper');
-        if (wrapper && src) {
-          wrapper.innerHTML = `<img id="ganeshaImg" src="${src}" alt="Lord Ganesha Emblem" class="w-20 h-20 object-contain drop-shadow" onerror="this.onerror=null; this.src='ganesh-logo.png';" />`;
-        }
-      }
-    }
-
-    function handleGaneshaFileUpload(event) {
-      const file = event.target.files[0];
-      if (file) {
-        const reader = new FileReader();
-        reader.onload = function(e) {
-          const base64 = e.target.result;
-          document.getElementById('settingGaneshaUrl').value = base64;
-        };
-        reader.readAsDataURL(file);
-      }
     }
 
     function toggleAdminDrawer() {
@@ -558,22 +519,19 @@
     }
 
     function applyDrawerSettings() {
+      const logoUrl = document.getElementById('settingGaneshaUrl').value;
       const rsvp = document.getElementById('settingRsvpUrl').value;
       const maps = document.getElementById('settingMapsUrl').value;
       const ytId = document.getElementById('settingYoutubeId').value;
-      const ganeshaUrl = document.getElementById('settingGaneshaUrl').value;
 
+      localStorage.setItem('wedding_ganesha_img', logoUrl);
       localStorage.setItem('wedding_rsvp_url', rsvp);
       localStorage.setItem('wedding_maps_url', maps);
       localStorage.setItem('wedding_yt_id', ytId);
 
+      document.getElementById('ganeshaEmblemImg').src = logoUrl;
       document.getElementById('rsvpButton').href = rsvp;
       document.getElementById('mapsButton').href = maps;
-
-      if (ganeshaUrl) {
-        localStorage.setItem('wedding_ganesha_img', ganeshaUrl);
-        renderCustomGaneshaImage(ganeshaUrl);
-      }
 
       if (ytPlayer && ytPlayer.loadVideoById) {
         ytPlayer.loadVideoById(ytId);
